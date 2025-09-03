@@ -1,4 +1,4 @@
-To enable logs define DEBUG_LOGS as 1, BEFORE including the header
+To enable logs define DEBUG_LOGS as 1, BEFORE including the header <br> <br>
 
 ex:
 
