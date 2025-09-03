@@ -2,7 +2,7 @@
 #include <fcntl.h>
 #include <string>
 #define DEBUG_LOGS 1
-#include "ErrorReport.hpp"
+#include "../include/ErrorReport.hpp"
 
 
 
