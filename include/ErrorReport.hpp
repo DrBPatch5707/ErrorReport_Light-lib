@@ -1,6 +1,6 @@
 #ifndef ERRORREPORT_HPP
 #define ERRORREPORT_HPP
-#endif
+
 
 #ifndef DEBUG_LOGS
     #define DEBUG_LOGS 0
@@ -44,3 +44,4 @@
     #define LOG(...) ((void)0)
 #endif
 
+#endif //ERRORREPORT_HPP
