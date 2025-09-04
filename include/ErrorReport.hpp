@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 
-#if DEBUG_LOGS == 1
+#if DEBUG_LOGS
 
     enum status {
     ERROR,
@@ -31,7 +31,7 @@
     
     };
 
-    const std::string ErrorReport::STATUS_LEVELS[3] = {
+    inline const std::string ErrorReport::STATUS_LEVELS[3] = {
         "ERROR",
         "INFO",
         "WARNING"
