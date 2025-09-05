@@ -6,12 +6,14 @@
     #define DEBUG_LOGS 0
 #endif
 
-#include <iostream>
-#include <string>
+
 
 #if DEBUG_LOGS
 
-    enum status {
+#include <iostream>
+#include <string>
+
+enum status {
     ERROR,
     INFO,
     WARNING
