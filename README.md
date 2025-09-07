@@ -6,11 +6,11 @@ A lightweight C++ header-only logging utility that lets you toggle
 ## Features
 
 -   **Compile-time toggles**: Logging code is completely removed when
-    disabled.\
+    disabled.
 -   **Separate log categories**:
-    -   `DLOG(...)` → Debug logs, controlled with `DEBUG_LOGS`.\
-    -   `LOG(...)` → Runtime logs, controlled with `RUNTIME_LOGS`.\
--   **Three status levels**: `ERROR`, `WARNING`, `INFO`.\
+    -   `DLOG(...)` → Debug logs, controlled with `DEBUG_LOGS`.
+    -   `LOG(...)` → Runtime logs, controlled with `RUNTIME_LOGS`.
+-   **Three status levels**: `ERROR`, `WARNING`, `INFO`.
 -   **Zero-overhead when disabled** (macros expand to no-ops).
 
 ------------------------------------------------------------------------
