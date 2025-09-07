@@ -17,13 +17,7 @@ A lightweight C++ header-only logging utility that lets you toggle
 
 ## Setup
 
-Include the header in your project:
-
-``` cpp
-#include "../include/ErrorReport.hpp"
-```
-
-Enable logs before including the header by defining macros:
+Enable desired logs before including the header by defining macros:
 
 ``` cpp
 #define DEBUG_LOGS 1
@@ -39,7 +33,7 @@ g++ main.cpp -DDEBUG_LOGS=1 -DRUNTIME_LOGS=1
 
 By default:
 
--   `DEBUG_LOGS = 0`\
+-   `DEBUG_LOGS = 0`
 -   `RUNTIME_LOGS = 0`
 
 ------------------------------------------------------------------------
