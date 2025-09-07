@@ -49,11 +49,11 @@ enum status {
         "WARNING"
     };
 
-    #define LOG(status_level, message) ::ErrorReport::log((status_level), (message))
+    #define DLOG(status_level, message) ::ErrorReport::log((status_level), (message))
 #else
     struct ErrorReport {};
 
-    #define LOG(...) ((void)0)
+    #define DLOG(...) ((void)0)
 #endif
 
 
@@ -85,10 +85,10 @@ enum status {
         "WARNING"
     };
 
-    #define RTLOG(status_level, message) ::RuntimeReport::log((status_level), (message))
+    #define LOG(status_level, message) ::RuntimeReport::log((status_level), (message))
 #else
     struct RuntimeReport {};
 
-    #define RTLOG(...) ((void)0)
+    #define LOG(...) ((void)0)
 #endif
 #endif //ERRORREPORT_HPP
