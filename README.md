@@ -8,8 +8,8 @@ A lightweight C++ header-only logging utility that lets you toggle
 -   **Compile-time toggles**: Logging code is completely removed when
     disabled.\
 -   **Separate log categories**:
-    -   `LOG(...)` → Debug logs, controlled with `DEBUG_LOGS`.\
-    -   `RTLOG(...)` → Runtime logs, controlled with `RUNTIME_LOGS`.\
+    -   `DLOG(...)` → Debug logs, controlled with `DEBUG_LOGS`.\
+    -   `LOG(...)` → Runtime logs, controlled with `RUNTIME_LOGS`.\
 -   **Three status levels**: `ERROR`, `WARNING`, `INFO`.\
 -   **Zero-overhead when disabled** (macros expand to no-ops).
 
@@ -40,11 +40,11 @@ By default:
 
 ## Usage
 
-Use `LOG` for debug logging and `RTLOG` for runtime logging:
+Use `DLOG` for debug logging and `LOG` for runtime logging:
 
 ``` cpp
-LOG(INFO, "This is a debug-only log");
-RTLOG(ERROR, "This is a runtime log");
+DLOG(INFO, "This is a debug-only log");
+LOG(ERROR, "This is a runtime log");
 ```
 
 Both take a `status` (`ERROR`, `WARNING`, `INFO`) and a `std::string`
@@ -67,8 +67,8 @@ int main() {
     const std::string file_name = "disk.img";
     int file = open(file_name.c_str(), O_RDWR);
     if(file <= 0) {
-        LOG(ERROR, "failed to open file " + file_name);
-        RTLOG(ERROR, "<runtime> failed to open file " + file_name);
+        DLOG(ERROR, "failed to open file " + file_name);
+        LOG(ERROR, "<runtime> failed to open file " + file_name);
         return 1;
     }
 
@@ -82,7 +82,7 @@ int main() {
 ## Notes
 
 -   If both systems are disabled, the macros expand to no-ops, so there
-    is **no runtime cost**.\
+    is **no runtime cost**.
 -   You can mix debug and runtime logs as needed. For example, keep
     debug off in production but leave runtime logs enabled.
 <br> <br> <br> <br> <br>
